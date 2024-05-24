@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, date
 import time
 import plotly.graph_objects as go
 import requests
+import joblib
 
 # Page configuration
 st.set_page_config(
@@ -385,12 +386,6 @@ else:
         st.dataframe(df_filtered)
 
     elif selected == "Predict Views":
-        import streamlit as st
-        import pandas as pd
-        import joblib
-        import numpy as np
-
-        # Data View content
         # Process new data (initial data with past 11 days)
         df = filter_data(process_data(API_TOKEN, URL))
 
@@ -421,97 +416,69 @@ else:
         if selected_device != "All":
             df_filtered = df_filtered[df_filtered['Device'] == selected_device]
 
+        elif selected == "Predict Views":
 
-        # Load the trained model
-        best_model = joblib.load('best_gradient_boosting_model.pkl')
+        # Data View content
+        # Process new data (initial data with past 11 days)
+        df = filter_data(process_data(API_TOKEN, URL))
 
-        # Load the label encoders
-        label_encoders = joblib.load('label_encoders.pkl')
+        # Sidebar
+        with st.sidebar:
+            st.title(' FunOlympics Games Dashboard')
 
-        # Example DataFrame to map country, region, and city
-        # This should be replaced with your actual data
+            sport_category_options = sorted(df['sports_group'].unique())
+            sport_category_options.insert(0, "All")
+            selected_sport_category = st.sidebar.selectbox('Sport Category', sport_category_options, index=0, key='sport_category_key')
 
-        # Function to encode the input data
-        def encode_input(data, label_encoders):
-            encoded_data = {}
-            for column, le in label_encoders.items():
-                if column in data:
-                    encoded_data[column] = le.transform([data[column]])[0]
-            return encoded_data
+            device_options = sorted(df['Device'].unique())
+            device_options.insert(0, "All")
+            selected_device = st.sidebar.selectbox('Device', device_options, index=0, key='device_key')
+
+            country_options = sorted(df['Full Country Name'].unique())
+            country_options.insert(0, "All")
+            selected_country = st.sidebar.selectbox('Country', country_options, index=0, key='country_key')
 
 
-        # Streamlit app
-        st.title("Predict Views")
+        # Apply filters
+        df_filtered = df.copy()
+        if selected_sport_category != "All":
+            df_filtered = df_filtered[df_filtered['sports_group'] == selected_sport_category]
+        if selected_device != "All":
+            df_filtered = df_filtered[df_filtered['Device'] == selected_device]
+        if selected_country != "All":
+            df_filtered = df_filtered[df_filtered['Country'] == selected_country]
+            
 
-        # Instructions
-        st.write("""
-        ### Welcome to the Predict Views Tool
-        Please fill in the details below to get the predicted number of views for your event.
-        """)
 
-        # Event Information
-        st.header("Event Information")
-        resource = st.selectbox("Select Resource", label_encoders['resource'].classes_)
-        event = st.selectbox("Select Event", label_encoders['Event'].classes_)
-        sports_group = st.selectbox("Select Sports Group", label_encoders['sports_group'].classes_)
-        resource_group = st.selectbox("Select Resource Group", label_encoders['resource_group'].classes_)
-        status_code = st.selectbox("Select Status Code", label_encoders['status_code'].classes_)
-        
+        # Load the pre-trained model and label encoders
+        model = joblib.load('model.pkl')
+        le_continent = joblib.load('le_continent.pkl')
+        le_event_type = joblib.load('le_event_type.pkl')
+        le_event = joblib.load('le_event.pkl')
 
-        # User Device Information
-        st.header("User Device Information")
-        device = st.selectbox("Select Device", label_encoders['Device'].classes_)
-        operating_system = st.selectbox("Select Operating System", label_encoders['Operating_System'].classes_)
-        browser = st.selectbox("Select Browser", label_encoders['Browser'].classes_)
+        # Streamlit App
+        st.title("Event View Prediction")
 
-        # Session Information
-        st.header("Session Information")
-        hour = st.slider("Hour of the Day", 0, 23, 12)
-        day = st.slider("Day of the Month", 1, 31, 1)
-        month = st.slider("Month", 1, 12, 1)
-        year = st.slider("Year", 2020, 2030, 2024)
-        elapsed_time = st.number_input("Elapsed Time (ms)", min_value=0, step=1, value=0)
-        session_duration = st.number_input("Session Duration (ms)", min_value=0, step=1, value=0)
+        # User Inputs
+        date = st.date_input("Select Date")
+        continent = st.selectbox("Continent", le_continent.classes_)
+        event_type = st.selectbox("Event Type", le_event_type.classes_)
+        event = st.selectbox("Event", le_event.classes_)
 
-        # Dynamic Dropdowns for Country, Region, and City
-        st.header("Location Information")
-        full_country = st.selectbox("Select Country", label_encoders['Full Country Name'].classes_)
-        region_options = df_filtered[df_filtered['Full Country Name'] == full_country]['Region'].unique()
-        region = st.selectbox("Select Region", label_encoders['Region'].classes_)
-        city_options = df_filtered[(df_filtered['Full Country Name'] == full_country) & (df_filtered['Region'] == region)]['City'].unique()
-        city = st.selectbox("Select City", label_encoders['City'].classes_)
+        # Feature Engineering
+        day_of_week = date.weekday()
+        month = date.month
+        day = date.day
 
-        # Prepare the input data
-        input_data = {
-            'resource': resource,
-            'Event': event,
-            'sports_group': sports_group,
-            'resource_group': resource_group,
-            'status_code': status_code,
-            'Full Country Name': full_country,
-            'Region': region,
-            'City': city,
-            'Device': device,
-            'Operating_System': operating_system,
-            'Browser': browser,
-            'hour': hour,
-            'day': day,
-            'month': month,
-            'year': year,
-            'elapsed_time': elapsed_time,
-            'session_duration': session_duration
-        }
+        # Encoding the categorical features
+        continent_encoded = le_continent.transform([continent])[0]
+        event_type_encoded = le_event_type.transform([event_type])[0]
+        event_encoded = le_event.transform([event])[0]
 
-        # Encode the input data
-        encoded_data = {}
-        for col, le in label_encoders.items():
-            if col in input_data:
-                encoded_data[col] = le.transform([input_data[col]])[0]
+        # Prepare the input for prediction
+        input_features = np.array([[day_of_week, month, day, continent_encoded, event_type_encoded, event_encoded]])
 
-        # Convert to DataFrame
-        input_df = pd.DataFrame([encoded_data])
+        # Prediction
+        predicted_views = model.predict(input_features)[0]
 
-        # Make prediction
-        if st.button("Predict Views"):
-            prediction = best_model.predict(input_df)
-            st.write(f"Predicted Views: {int(prediction[0])}")
+        st.write(f"Predicted Views for {event} on {date}: {predicted_views:.0f}")
