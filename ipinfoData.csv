@@ -1,0 +1,930 @@
+IP,Country,Region,City
+25.85.225.220,GB,England,London
+131.154.40.150,IT,Emilia-Romagna,Bologna
+117.61.21.94,CN,Jiangsu,Nanjing
+90.27.169.176,FR,Brittany,Rennes
+108.185.85.41,US,California,Bellflower
+159.40.29.68,US,Virginia,Ashburn
+126.110.89.151,JP,Tokyo,Minato-ku
+82.142.68.215,CZ,Hlavní město Praha,Prague
+218.122.87.224,JP,Tokyo,Minato-ku
+15.143.85.132,US,Washington,Seattle (South Lake Union)
+153.4.4.218,US,Connecticut,Newington
+212.198.88.181,FR,Île-de-France,Paris
+130.155.215.29,AU,Australian Capital Territory,Reid
+143.168.131.122,US,Washington,Seattle (South Lake Union)
+208.54.25.100,US,Virginia,Ashburn
+18.19.100.99,US,Massachusetts,Cambridge (Area 2/MIT)
+169.195.63.33,US,New Jersey,Warren Township
+135.240.121.207,GB,England,London
+82.8.24.66,GB,Northern Ireland,Belfast
+82.249.17.117,FR,Île-de-France,Paris
+51.168.92.38,US,Illinois,Chicago
+54.81.11.131,US,Virginia,Ashburn
+15.181.244.126,US,Virginia,Ashburn
+192.74.135.255,US,Utah,Payson
+139.65.74.163,US,California,San Ramon
+177.241.230.162,MX,Puebla,Puebla City
+197.170.22.185,ZA,Gauteng,Sandton (Sandhurst)
+214.224.29.220,US,Ohio,Whitehall
+83.182.194.61,SE,Östergötland,Linköping
+40.82.15.1,US,Washington,Redmond (Overlake)
+177.90.131.150,BR,São Paulo,São Paulo
+208.16.9.161,US,Virginia,Reston
+12.6.172.177,US,New York,New York
+146.55.114.165,US,Arizona,Sierra Vista (Fort Huachuca)
+102.198.238.66,MU,Plaines Wilhems,Ebene CyberCity
+94.199.224.104,IE,Leinster,Dublin (Knockmitten)
+156.216.169.146,EG,Giza,Giza
+218.13.167.155,CN,Guangdong,Foshan
+152.187.229.54,US,Illinois,Chicago (Near South Side)
+58.200.200.83,CN,Beijing,Haidian (Haidian Qu)
+74.198.225.135,CA,Ontario,Toronto (Old Toronto)
+209.38.51.109,US,New York,New York
+142.79.35.201,US,Pennsylvania,Pittsburgh (North Shore)
+149.236.214.70,DE,Baden-Wurttemberg,Ettlingen
+110.212.148.178,CN,Beijing,Jinrongjie (Xicheng District)
+25.8.244.252,GB,England,London
+197.63.116.20,EG,Giza,Giza
+124.168.151.142,AU,Western Australia,Perth
+181.215.28.143,BR,São Paulo,São Paulo
+208.230.175.159,US,Illinois,Oak Brook
+168.123.199.1,GU,Barrigada,Barrigada
+108.164.106.123,US,Nevada,Las Vegas
+206.201.92.157,US,New York,New York
+193.9.92.57,SE,Stockholm,Stockholm
+66.55.131.87,US,New Jersey,Piscataway
+137.178.72.230,US,Ohio,Cincinnati (Central Business District)
+2.68.175.231,SE,Stockholm,Stockholm (Kungsholmen)
+164.51.104.179,US,Florida,Tallahassee
+220.96.155.108,JP,Tokyo,Chiyoda
+204.208.67.114,ZA,Eastern Cape,Mount Fletcher
+66.246.77.215,US,Colorado,Denver (North Capitol Hill)
+18.88.211.79,GB,England,London
+115.89.246.195,KR,Seoul,Yongsan-dong (Hangang-daero)
+83.162.102.157,NL,North Holland,Amsterdam
+207.241.47.11,US,Washington,Redmond (Downtown)
+164.106.246.108,US,Virginia,Richmond
+151.179.46.255,US,Texas,Dallas (Park Cities)
+199.182.60.194,US,California,San Jose
+70.134.140.141,US,Virginia,Ashburn
+124.83.178.242,JP,Tokyo,Chiyoda
+51.131.52.57,US,Illinois,Chicago
+23.235.81.21,US,California,Los Angeles
+1.72.130.155,JP,Tokyo,Chiyoda
+106.133.158.134,JP,Tokyo,Chiyoda
+181.91.96.172,AR,Buenos Aires F.D.,Buenos Aires
+99.252.239.55,CA,Ontario,Toronto (Old Toronto)
+178.18.6.231,RU,Samara Oblast,Samara
+84.60.33.62,DE,Hesse,Frankfurt am Main
+70.25.15.251,CA,Ontario,Ottawa (Downtown)
+110.118.77.59,CN,Beijing,Jinrongjie (Xicheng District)
+20.181.18.197,GB,England,London
+219.80.126.218,TW,Taiwan,Taipei
+108.209.22.53,US,Michigan,Grand Rapids
+28.63.218.206,US,Ohio,Whitehall
+118.156.98.155,JP,Ōsaka,Osaka
+212.201.143.94,DE,Mecklenburg-Vorpommern,Heringsdorf
+202.104.249.96,CN,Guangdong,Xiaolou
+77.225.169.202,ES,Andalusia,Lepe
+57.9.13.19,CH,Geneva,Cointrin
+199.44.200.40,US,New York,New York
+143.237.93.106,SE,Gävleborg,Gävle
+154.23.122.58,HK,Kowloon,Hong Kong
+174.250.201.223,US,Virginia,Ashburn
+94.156.250.93,GB,England,London
+77.127.219.254,IL,Central District,Petah Tikva
+201.138.252.104,MX,Mexico City,Mexico City (Centro)
+103.229.182.206,KR,Seoul,Seoul (Toegye-ro)
+16.187.233.23,US,Washington,Seattle (South Lake Union)
+202.148.135.58,AU,New South Wales,Sydney
+72.147.134.45,US,Georgia,Atlanta (Buckhead)
+63.13.181.212,US,Illinois,Chicago (Near South Side)
+201.193.238.121,CR,San José,San José
+160.70.151.179,DE,North Rhine-Westphalia,Ratingen
+89.82.23.212,FR,Île-de-France,Nanterre
+125.77.118.77,CN,Fujian,Gaosha
+194.124.200.244,DE,Hesse,Frankfurt am Main
+19.93.147.61,US,Michigan,Dearborn
+28.107.227.144,US,Ohio,Whitehall
+187.83.247.96,BR,São Paulo,São Paulo
+110.158.212.3,JP,Tokyo,Chiyoda
+161.19.247.189,US,Texas,Houston (Southeast Houston)
+35.212.197.140,US,Oregon,The Dalles
+59.254.144.198,CN,Beijing,Beijing
+144.154.22.252,US,Indiana,Indianapolis (Mile Square)
+50.242.4.72,US,New Jersey,Newark
+86.231.172.80,FR,Île-de-France,Paris
+202.127.225.60,CN,Beijing,Haidian (Haidian Qu)
+195.64.20.149,AT,Vienna,Vienna (Leopoldstadt)
+78.186.20.84,TR,Erzurum,Erzurum
+160.131.48.110,US,Florida,Tallahassee
+41.149.142.211,ZA,Gauteng,Kempton Park (Isando)
+157.4.13.240,JP,Ōsaka,Osaka
+200.83.202.252,CL,Santiago Metropolitan,Las Condes
+11.209.236.177,US,Ohio,Whitehall
+44.16.242.78,US,California,San Diego (Clairemont)
+94.73.255.138,RU,Krasnoyarsk Krai,Krasnoyarsk
+4.192.106.207,HK,Kowloon,Hong Kong
+198.138.72.245,US,Washington,Redmond (Downtown)
+219.105.157.122,JP,Tokyo,Chiyoda
+181.78.196.122,EC,Guayas,Guayaquil
+41.231.56.54,TN,Ben Arous Governorate,Ben Arous
+55.2.22.155,US,New York,New York
+168.21.91.88,US,Georgia,Athens
+61.7.126.184,JP,Saga,Saga
+67.123.67.194,US,New York,New York
+110.249.150.71,CN,Hebei,Zhangjiakou
+15.138.189.123,US,Washington,Seattle (South Lake Union)
+98.231.254.241,US,Maryland,Cloverly
+88.164.237.252,FR,Brittany,Rennes
+98.52.231.228,US,Illinois,Homewood
+171.153.172.137,US,California,Concord
+32.74.214.74,US,New York,New York
+18.204.236.244,US,Washington,Seattle (South Lake Union)
+132.254.87.220,MX,Nuevo León,Monterrey (Tecnológico)
+106.191.100.41,JP,Ōsaka,Osaka
+184.198.171.193,US,Massachusetts,Springfield
+163.10.238.207,AR,Buenos Aires,La Plata
+199.163.63.229,US,Virginia,Reston
+64.50.47.163,US,California,San Diego (Miramar)
+144.177.211.223,NO,Oslo,Oslo
+3.21.42.190,US,Ohio,Columbus
+81.71.1.108,CN,Beijing,Haidian (Haidian Qu)
+45.79.239.37,AU,New South Wales,Sydney
+78.105.36.22,GB,England,London (Shadwell)
+56.236.7.255,US,North Carolina,Raleigh (North Hills)
+58.2.124.64,IN,Haryana,Gurgaon (Sector 18)
+48.152.190.207,US,New Jersey,Newark (Central Business District)
+67.174.188.17,US,Colorado,Arvada
+57.15.250.184,CH,Geneva,Cointrin
+119.35.113.88,CN,Guangdong,Guangzhou
+33.81.210.133,US,Ohio,Whitehall
+12.19.206.74,US,Texas,Mesquite (Galloway Medical Arts)
+162.17.154.188,US,Michigan,Detroit
+85.234.87.1,GB,England,Loughborough
+145.254.52.60,DE,Hesse,Sulzbach
+69.223.93.241,US,California,Fair Oaks
+218.76.1.96,CN,Jiangxi,Shangli (Liuyang Shi)
+109.38.176.59,NL,Drenthe,Hoogeveen
+172.197.194.178,AU,Tasmania,Hobart
+74.117.133.245,US,Texas,Dallas (Dallas Downtown Historic District)
+82.87.195.23,ES,Castille-La Mancha,Toledo
+174.121.58.68,US,Illinois,Chicago
+106.153.156.124,JP,Tokyo,Chiyoda
+89.52.106.147,DE,Hamburg,Hamburg (Hamburg-Nord)
+135.14.132.50,US,California,San Jose (Berryessa)
+157.2.95.97,JP,Tokyo,Chiyoda
+144.138.109.127,AU,New South Wales,Sydney
+172.51.255.221,US,Washington,Bellevue (Factoria)
+40.198.165.74,US,Indiana,Indianapolis
+187.165.87.16,MX,Nuevo León,San Nicolás de los Garza (Sin Nombre de Colonia 22)
+72.208.246.121,US,Arizona,Phoenix
+110.201.103.170,CN,Beijing,Jinrongjie (Xicheng District)
+49.166.4.20,US,California,Los Angeles
+220.61.152.7,JP,Tokyo,Minato-ku
+151.145.13.53,US,Utah,West Jordan
+223.181.188.189,IN,Madhya Pradesh,Bhopal (B Sector)
+48.158.54.213,US,New Jersey,Newark (Central Business District)
+118.235.106.185,KR,Gyeonggi-do,Seongnam-si (Buljeong-ro)
+210.221.164.167,KR,Jeollanam-do,Mokpo-si
+182.96.52.98,CN,Jiangxi,Taohua
+198.210.9.55,US,Alabama,Birmingham
+27.153.151.58,CN,Fujian,Putian
+199.214.195.16,CA,Alberta,Edmonton (University of Alberta Farm)
+173.10.30.62,US,Utah,Salt Lake City
+186.152.163.216,AR,Buenos Aires F.D.,Buenos Aires
+141.88.178.218,DE,North Rhine-Westphalia,Dortmund
+5.252.102.148,DE,Hesse,Frankfurt am Main
+138.172.116.138,US,Ohio,Whitehall
+121.212.226.76,AU,New South Wales,Sydney
+213.203.226.108,DE,North Rhine-Westphalia,"Cologne (Innenstadt, Cologne)"
+139.86.39.1,AU,Queensland,Darling Heights
+187.253.252.95,MX,Mexico City,Mexico City
+176.189.251.133,FR,Île-de-France,Nanterre
+68.195.31.154,US,New York,New York
+12.189.5.190,US,Texas,Houston
+189.12.130.215,BR,São Paulo,São Paulo
+44.92.134.254,US,California,San Diego (Clairemont)
+208.198.21.189,US,New York,New York
+92.109.225.185,NL,North Holland,Amsterdam
+102.93.97.24,NG,Lagos,Lagos (Victoria Island Annex)
+46.177.76.113,GR,Attica,Chalandri
+186.233.125.92,BR,São Paulo,Presidente Bernardes
+130.76.35.202,US,Illinois,Chicago (West Loop)
+131.82.10.6,US,Ohio,Whitehall
+217.31.235.155,TR,Istanbul,Tuzla
+158.151.89.134,US,Florida,Jacksonville (Deerwood)
+58.226.236.3,KR,Seoul,Seoul (Toegye-ro)
+144.115.3.132,US,Illinois,Chicago (West Loop)
+91.1.1.144,DE,Hesse,Frankfurt am Main
+32.255.77.1,US,Washington,Redmond (Downtown)
+120.130.98.191,CN,Beijing,Beijing
+110.214.236.188,CN,Beijing,Jinrongjie (Xicheng District)
+97.149.214.90,US,Massachusetts,Boston
+144.148.141.162,US,Indiana,Indianapolis (Mile Square)
+47.136.13.159,US,California,Ontario
+50.23.186.142,CA,Quebec,Montreal
+148.129.229.165,US,Maryland,Suitland-Silver Hill (Suitland)
+46.205.83.110,PL,Mazovia,Warsaw (Mokotów)
+121.88.95.155,KR,Gyeonggi-do,Gwangmyeong (Digital-ro)
+177.70.119.214,BR,São Paulo,São Paulo
+42.31.149.95,KR,Seoul,Seoul (Eulji-ro)
+82.69.58.153,GB,England,London
+217.213.10.177,SE,Västra Götaland,Sävedalen
+141.25.116.238,DE,Lower Saxony,Brunswick (Lehndorf-Watenbüttel)
+220.223.162.116,JP,Tokyo,Chiyoda
+85.169.144.116,FR,Auvergne-Rhône-Alpes,Ferney-Voltaire
+134.134.143.153,US,California,Santa Clara
+35.14.203.223,US,Michigan,East Lansing
+165.64.144.159,US,North Carolina,Charlotte (Elizabeth)
+42.53.196.161,CN,Liaoning,Shenyang
+204.26.12.120,US,Michigan,Novi
+20.85.125.222,US,Virginia,Boydton
+101.118.119.81,AU,New South Wales,North Sydney
+222.250.208.71,TW,Taiwan,Neihu District
+102.162.70.25,MU,Plaines Wilhems,Beau Bassin-Rose Hill
+101.242.76.236,CN,Beijing,Beijing
+170.196.175.79,US,Connecticut,Stamford (Newfield - Westover - Turn of River)
+65.79.121.156,US,Illinois,Peoria
+86.192.252.66,FR,Hauts-de-France,Lille
+218.119.97.198,JP,Tokyo,Minato-ku
+216.94.10.216,US,New York,New York
+80.29.206.172,ES,Madrid,Madrid
+46.254.14.118,SE,Stockholm,Stockholm
+212.73.108.228,RU,Moscow,Moscow
+47.198.121.180,US,Florida,Port Richey
+203.19.174.55,AU,Western Australia,Perth
+219.82.148.205,CN,Zhejiang,Huzhou (Anji County)
+202.231.93.247,JP,Tokyo,Chiyoda
+134.211.11.69,AU,New South Wales,Belrose
+27.207.225.184,CN,Shandong,Weifang
+11.128.180.137,US,Ohio,Whitehall
+34.111.227.151,US,Missouri,Kansas City
+172.31.128.200,ZZ,,
+110.59.98.240,CN,Beijing,Haidian (Haidian Qu)
+205.38.172.214,US,Ohio,Whitehall
+155.65.59.86,US,New Jersey,Bridgewater Township
+3.248.187.193,IE,Leinster,Dublin
+37.96.42.51,DK,Central Jutland,Aarhus
+88.80.219.60,FR,Grand Est,Strasbourg
+14.49.48.186,KR,Gyeonggi-do,Seongnam-si (Buljeong-ro)
+84.197.7.123,BE,Flanders,Balen
+79.113.171.100,RO,Vâlcea County,Râmnicu Vâlcea
+128.45.10.249,IT,Lazio,Rome
+73.245.118.182,US,Florida,Delray Beach
+170.111.239.217,US,Texas,San Antonio (Northwest Side)
+50.105.88.245,US,Michigan,Muskegon (Jackson Hills)
+32.81.42.74,US,New York,New York
+111.12.146.243,CN,Guangdong,Shenzhen
+119.77.237.91,TW,Taiwan,Neihu District
+172.54.112.232,US,Illinois,Chicago
+102.181.88.217,SD,Khartoum,Khartoum
+79.145.190.111,ES,Madrid,Madrid
+158.29.87.164,US,Texas,Spring
+38.44.63.61,DO,Santo Domingo Province,Santo Domingo Este
+70.189.94.142,US,Oklahoma,Tulsa
+38.24.11.54,US,Ohio,Cleveland
+185.14.7.187,RU,Moscow,Moscow
+187.4.39.112,BR,São Paulo,Birigui
+109.235.8.205,UA,Dnipropetrovsk,Dnipro
+28.175.180.196,US,Ohio,Whitehall
+120.39.127.172,CN,Fujian,Amoy
+156.57.233.222,CA,Newfoundland and Labrador,Corner Brook
+58.144.45.187,CN,Chongqing,Chongqing
+86.233.206.93,FR,Nouvelle-Aquitaine,Poitiers
+140.186.65.52,US,North Dakota,Fargo
+84.17.22.202,RU,St.-Petersburg,St Petersburg
+40.70.51.231,US,Virginia,Boydton
+150.157.149.210,US,Ohio,Whitehall
+218.240.11.98,CN,Fujian,Amoy (Huli Qu)
+113.232.229.78,CN,Liaoning,Shenyang
+220.69.134.248,KR,Daegu,Sindang-dong
+62.100.138.125,FR,Île-de-France,Montreuil
+200.200.148.50,BR,São Paulo,São Paulo
+93.113.250.86,RS,Central Serbia,Belgrade (New Belgrade)
+89.40.218.93,RO,Bucureşti,Bucharest (Sector 6)
+198.103.250.8,CA,Ontario,Ottawa (Downtown)
+220.143.235.252,TW,Taiwan,Neihu District
+172.240.26.154,US,Texas,Dallas
+61.246.93.193,IN,Tamil Nadu,Chennai
+124.19.101.242,AU,New South Wales,Macquarie Park
+31.208.168.131,SE,Stockholm,Stockholm
+32.228.210.225,US,New York,New York
+38.241.131.194,US,Ohio,Cleveland
+91.99.179.99,IR,Khuzestan,Khorramshahr
+188.70.143.72,KW,Al Asimah,Kuwait City (Jibla)
+107.114.224.105,US,District of Columbia,Washington D.C.
+117.26.170.78,CN,Fujian,Ningde
+9.122.57.178,CA,Quebec,Montreal
+52.190.172.166,US,California,San Jose
+118.151.110.98,JP,Tokyo,Chiyoda
+37.225.99.22,PL,Mazovia,Warsaw
+12.147.236.41,US,California,San Diego (Mission Bay Park)
+2.129.46.164,DK,North Denmark,Aalborg
+210.126.62.196,KR,Gangwon-do,Pyeongchang-gun (Pyeongchang-eup)
+46.193.48.172,FR,Île-de-France,Paris
+148.163.81.7,US,Arizona,Phoenix (Southbank)
+143.66.54.113,US,New York,Corning
+148.62.70.65,US,Texas,Dallas
+7.101.105.217,US,Ohio,Whitehall
+172.100.153.192,US,New York,Jamestown
+129.39.79.131,US,North Carolina,Durham (Research Triangle)
+17.41.219.149,US,California,Cupertino
+84.225.206.245,HU,Budapest,Budapest
+89.68.236.232,PL,Mazovia,Warsaw
+158.106.223.24,US,New York,New York
+201.207.185.198,CR,Cartago,Cartago
+195.31.6.185,IT,Tuscany,Florence
+130.65.207.124,US,California,San Jose (Central San Jose)
+18.35.139.114,US,Virginia,Herndon
+151.31.5.153,IT,Lazio,Colle Monfortani
+48.221.106.59,GB,England,London
+140.160.125.60,US,Washington,Bellingham
+161.66.93.174,NZ,Auckland,Auckland
+152.199.84.144,US,California,Los Angeles (Playa Vista)
+81.146.141.167,GB,England,Hemel Hempstead
+16.79.163.65,US,California,Palo Alto
+65.52.230.220,IE,Leinster,Dublin
+5.117.113.213,IR,Tehran,Tehrān (District 4)
+136.248.29.242,US,California,Redwood City (Redwood Shores)
+202.69.214.228,AU,New South Wales,Pyrmont
+141.157.106.17,US,New York,New York
+19.0.175.88,US,Michigan,Dearborn
+8.228.12.160,US,Louisiana,Monroe
+112.113.235.18,CN,Yunnan,Jianshui
+23.214.44.82,AU,New South Wales,Sydney
+149.147.140.11,KW,Al Asimah,Kuwait City (Jibla)
+126.242.156.176,US,District of Columbia,Washington D.C.
+80.8.160.203,RE,Réunion,Saint-Denis
+155.143.121.15,AU,New South Wales,Sydney
+12.119.226.186,US,New Jersey,Morristown
+65.29.111.24,US,Ohio,Lima
+78.177.132.94,TR,Afyonkarahisar Province,Afyonkarahisar
+23.23.189.36,CA,Quebec,Montreal
+99.26.238.153,US,Connecticut,Wallingford
+36.204.209.51,CN,Beijing,Jinrongjie (Xicheng District)
+132.96.251.0,US,Arizona,Sierra Vista (Fort Huachuca)
+154.14.196.48,DE,Bavaria,Nuremberg
+155.72.172.234,US,Maryland,Bethesda
+91.148.45.75,SK,Žilina Region,Vrútky
+173.209.22.13,US,Missouri,Springfield (Walnut Street)
+109.87.102.229,UA,Kyiv City,Kyiv
+191.92.181.26,CO,Bogota D.C.,Bogotá (Engativa)
+56.38.119.226,US,North Carolina,Raleigh (North Hills)
+140.83.118.105,AU,New South Wales,Sydney
+167.5.190.71,US,New York,Hicksville
+73.53.1.4,US,Washington,Seattle
+163.16.178.221,TW,Kaohsiung,Kaohsiung City
+166.165.176.193,US,Illinois,Hickory Hills
+161.44.221.222,US,North Carolina,Morrisville
+203.42.131.218,AU,New South Wales,Sydney
+219.142.10.110,CN,Beijing,Beijing
+25.149.203.190,GB,England,London
+43.113.238.154,CN,Beijing,Beijing
+95.12.38.127,TR,Istanbul,Istanbul
+190.111.57.203,AR,Buenos Aires F.D.,Balvanera
+135.36.181.109,US,California,San Jose (North San Jose)
+153.231.123.44,JP,Tokyo,Chiyoda
+102.101.12.238,MA,Casablanca-Settat,Méchouar de Casablanca
+154.213.248.71,HK,Kowloon,Hong Kong
+13.89.241.97,US,Iowa,Des Moines
+194.62.34.218,GB,England,Swindon
+175.45.74.102,AU,New South Wales,North Sydney
+65.220.247.255,US,Illinois,Chicago (Near South Side)
+209.47.231.15,US,Massachusetts,Boston
+76.132.213.174,US,California,San Jose (Great Oaks)
+186.148.113.126,AR,Santa Fe,Funes
+154.91.207.102,ZA,Gauteng,Johannesburg
+196.113.197.250,MA,Fès-Meknès,Fes
+206.172.11.170,CA,Ontario,Toronto (Etobicoke)
+154.223.128.15,HK,Kowloon,Hong Kong
+51.94.210.232,ES,Madrid,Madrid
+187.159.99.228,MX,Mexico City,Mexico City (Miguel Hidalgo Villa Olímpica)
+136.162.26.143,US,Washington,Seattle (Downtown Seattle)
+101.124.92.133,US,California,San Jose
+23.8.104.152,US,Texas,Dallas
+49.218.226.240,TW,Taiwan,Taipei
+42.242.202.225,CN,Yunnan,Jianshui
+52.150.101.192,US,Virginia,Washington
+65.141.252.39,US,North Dakota,Bismarck
+52.72.58.196,US,New York,New York
+77.160.7.220,NL,South Holland,Alphen aan den Rijn
+173.71.122.200,US,New Jersey,Camden
+223.172.244.122,KR,Seoul,Paripark (World cup buk-ro)
+128.214.250.217,FI,Uusimaa,Espoo
+174.189.156.252,US,Colorado,Denver (Five Points)
+1.32.155.253,SG,,Singapore (Orchard)
+158.165.207.168,US,Oregon,Eugene (Whiteaker)
+178.145.218.214,BE,Wallonia,Reuland
+98.242.126.75,US,Georgia,Stone Mountain
+56.196.254.122,US,North Carolina,Raleigh (North Hills)
+205.135.68.7,US,Massachusetts,Boston (Prudential / St. Botolph)
+48.91.169.101,US,New Jersey,Newark (Central Business District)
+165.8.205.201,ZA,Gauteng,Pretoria
+27.240.251.253,TW,Taiwan,Taipei
+203.76.64.61,JP,Okayama,Kurashiki (Nakashima)
+21.90.45.62,US,Ohio,Whitehall
+83.230.60.166,PL,Silesia,Gliwice
+193.217.57.101,SE,Stockholm,Stockholm (Kista)
+210.81.89.114,JP,Tokyo,Shibuya
+102.108.65.178,TN,Tunis Governorate,Tunis (Berges du Lac)
+139.161.165.154,US,Arizona,Sierra Vista (Fort Huachuca)
+139.47.1.148,ES,Andalusia,Moguer
+206.204.154.247,ES,Madrid,Alcobendas
+61.147.64.154,CN,Jiangsu,Nanjing
+30.91.214.216,US,Ohio,Whitehall
+75.90.130.75,US,Texas,Fairfield
+42.51.192.60,CN,Henan,Zhengzhou
+41.175.37.117,MU,Plaines Wilhems,Ebene CyberCity
+177.52.209.111,BR,Santa Catarina,Concórdia
+54.208.82.147,US,Washington,Seattle (South Lake Union)
+87.232.240.98,IE,Leinster,Ballyogan (Sandyford)
+91.169.93.22,FR,Île-de-France,Paris
+148.53.19.153,GB,England,London
+193.161.48.149,NO,Akershus,Sandvika
+10.83.251.121,ZZ,,
+152.203.151.117,CO,Bogota D.C.,Bogotá (Suba)
+186.160.80.84,PE,Lima region,Lurín
+94.43.203.167,GE,T'bilisi,T'bilisi (Dzveli Tbilisi)
+213.144.2.91,DE,Baden-Württemberg,Karlsruhe (Durlach)
+29.183.139.25,US,Ohio,Whitehall
+134.81.185.130,DE,Hesse,Frankfurt am Main (Frankfurt am Main West)
+16.151.162.62,US,California,Palo Alto
+123.119.206.250,CN,Beijing,Jinrongjie (Xicheng District)
+49.226.147.126,NZ,Auckland,Auckland (Takapuna)
+89.254.68.89,NO,Oslo,Oslo
+75.197.59.129,US,New Jersey,Newark
+213.108.214.95,RU,St.-Petersburg,St Petersburg
+125.95.186.124,CN,Guangdong,Xiaolou
+160.130.243.224,US,Florida,Tallahassee
+103.231.43.195,IN,Telangana,Hyderabad (Sri Nagar Colony)
+184.7.14.166,US,Indiana,Cleveland
+12.165.136.162,US,California,Pomona
+49.228.104.49,TH,Bangkok,Ratchathewi (Khwaeng Samsen Nai)
+80.110.152.91,AT,Vienna,Vienna (Favoriten)
+201.249.216.176,VE,Miranda,Caracas (Los Palos Grandes)
+59.10.234.161,KR,Seoul,Bukgajwa-dong
+35.161.233.156,US,Oregon,Portland
+208.15.252.115,US,Texas,Plano
+33.213.110.243,US,Ohio,Whitehall
+76.241.104.209,US,Washington,Seattle (South Lake Union)
+157.208.46.81,CA,Quebec,Magdalen Islands
+183.23.115.203,CN,Guangdong,Xiaolou
+153.138.139.17,JP,Ōsaka,Osaka
+101.207.183.97,CN,Sichuan,Chengdu
+163.147.66.143,JP,Tokyo,Chiyoda
+55.20.23.213,US,Arizona,Sierra Vista (Fort Huachuca)
+139.37.55.135,US,Ohio,Columbus
+137.245.0.40,US,Alabama,Montgomery
+84.93.36.12,GB,England,London (Colindale)
+198.242.217.36,US,Ohio,Cleveland
+143.67.31.235,US,New York,Jamestown
+121.118.245.149,JP,Ōsaka,Osaka
+118.14.175.25,JP,Ōsaka,Osaka
+182.11.216.165,ID,Jakarta,Jakarta
+217.151.240.6,DE,Bavaria,Neureichenau
+199.198.94.161,CA,Ontario,Mississauga
+164.131.79.144,FR,Île-de-France,Paris
+189.176.246.105,MX,Mexico City,Mexico City (Centro)
+152.73.88.50,DK,Capital Region,Søborg
+14.0.30.0,VN,Hanoi,Hanoi
+6.247.196.223,US,Arizona,Sierra Vista (Fort Huachuca)
+147.255.10.184,US,California,Los Angeles (Central LA)
+7.238.163.23,US,Ohio,Whitehall
+77.224.11.171,ES,Madrid,Madrid
+69.192.138.69,US,Illinois,Mount Prospect
+37.89.241.56,DE,Hesse,Frankfurt am Main
+67.117.80.225,US,New York,New York
+195.52.94.4,DE,North Rhine-Westphalia,Düsseldorf (Stadtbezirke 04)
+195.161.153.227,RU,Moscow,Moscow
+119.193.119.49,KR,Gyeonggi-do,Dongducheon-si (Jihaeng-dong)
+52.156.24.140,CA,Ontario,Toronto
+185.181.217.139,SE,Stockholm,Stockholm
+3.0.9.21,SG,,Singapore (Bedok New Town)
+20.180.213.77,GB,England,London
+176.250.178.38,GB,England,London (Shadwell)
+83.160.35.64,NL,North Holland,Amsterdam
+48.127.124.189,US,New Jersey,Newark (Central Business District)
+189.133.253.54,MX,Mexico City,Mexico City (Centro)
+23.150.117.143,US,Virginia,Centreville
+40.159.243.227,US,Washington,Redmond (Overlake)
+54.206.234.78,AU,New South Wales,Sydney
+38.241.203.232,US,Ohio,Cleveland
+150.243.37.35,US,Missouri,Kirksville
+70.52.6.67,CA,Quebec,Québec (Sainte-Foy)
+111.43.182.179,CN,Heilongjiang,Harbin
+44.52.91.180,US,California,San Diego (Clairemont)
+51.255.18.190,FR,Hauts-de-France,Roubaix
+223.80.173.89,CN,Shandong,Jinan
+51.192.237.1,US,Illinois,Chicago
+94.243.53.80,RU,Irkutsk Oblast,Irkutsk
+129.122.161.84,AO,Luanda,Talatona
+217.127.152.184,ES,Madrid,Madrid
+210.131.181.212,JP,Aichi,Nagoya
+103.175.218.195,ID,Jakarta,Jakarta Pusat
+88.24.185.179,ES,Canary Islands,San Cristóbal de La Laguna
+111.155.171.21,CN,Beijing,Haidian (Haidian Qu)
+48.68.202.55,US,New Jersey,Newark (Central Business District)
+213.228.166.32,PT,District of Setúbal,Palmela
+106.229.97.88,CN,Jiangxi,Taohua
+73.83.157.158,US,Washington,Seattle
+18.113.66.96,GB,England,London
+64.170.83.187,US,California,Los Angeles
+159.122.191.248,IT,Lombardy,Milan
+76.170.193.88,US,California,La Mirada
+129.128.183.87,CA,Alberta,Edmonton (South Central Edmonton)
+209.118.117.205,US,New York,New York
+171.55.4.196,IN,Delhi,New Delhi (Okhla Phase III)
+75.255.154.41,US,Massachusetts,Boston
+149.206.97.61,DE,North Rhine-Westphalia,Essen (Stadtbezirke IV)
+13.174.102.124,US,Texas,Dallas
+114.25.137.167,TW,Taiwan,Neihu District
+77.7.238.42,DE,Bavaria,Munich
+220.2.13.45,JP,Tokyo,Minato-ku
+156.182.169.15,EG,Cairo,Cairo
+101.156.66.185,CN,Beijing,Beijing
+29.248.239.169,US,Ohio,Whitehall
+210.239.116.137,JP,Tochigi,Oyama
+199.1.205.217,US,Colorado,Denver (East)
+104.229.160.191,US,New York,Philadelphia
+101.93.203.76,CN,Shanghai,Shanghai
+138.60.203.241,US,Ohio,Columbus
+92.244.204.204,SE,Jönköping,Värnamo
+93.250.198.190,DE,Bremen,Bremen (Häfen)
+181.22.46.113,AR,Buenos Aires F.D.,San Telmo
+70.39.123.159,US,New York,New York
+71.33.67.24,US,Arizona,Tucson
+23.216.80.196,US,Washington,Seattle
+146.1.140.23,US,California,San Jose (Downtown San Jose)
+33.46.54.243,US,Ohio,Whitehall
+101.193.167.96,CN,Beijing,Beijing
+77.139.133.190,IL,Central District,Petah Tikva
+93.236.200.201,DE,Hesse,Frankfurt am Main
+65.118.238.169,US,New York,New York
+74.125.107.225,BR,São Paulo,São Paulo
+121.137.129.188,KR,Gyeonggi-do,Hwaseong-si (Jangan-myeon)
+201.231.47.242,AR,Buenos Aires F.D.,Palermo
+110.83.226.176,CN,Fujian,Sanming
+177.33.111.254,BR,São Paulo,São Paulo
+123.168.244.130,CN,Shandong,Xintai
+107.191.249.9,US,Delaware,Dover
+152.237.17.16,BR,São Paulo,São Paulo
+210.110.161.107,KR,Busan,Daeyeon-dong
+206.239.143.20,US,Washington,Redmond (Downtown)
+113.181.128.67,VN,Bắc Giang Province,Bắc Giang
+202.228.109.141,JP,Tokyo,Chiyoda
+45.243.27.243,EG,Giza,Giza
+139.38.179.59,ZA,Eastern Cape,Mount Fletcher
+163.151.149.214,US,New York,White Plains
+210.98.125.163,KR,Gyeonggi-do,Hanam (Sangil-ro)
+59.124.35.238,TW,Taiwan,Neihu District
+71.192.80.181,US,Massachusetts,Woburn
+173.40.130.234,US,Virginia,Ashburn
+125.243.122.92,KR,Gyeonggi-do,Anyang-si (Deokcheon-ro)
+103.248.16.230,AU,South Australia,Adelaide
+2.181.103.217,IR,Tehran,Tehran
+91.110.106.46,GB,England,Upper Poppleton
+144.203.88.222,US,California,Berkeley (Downtown Berkeley)
+41.65.71.113,EG,Giza,Kirdāsah
+50.188.19.20,US,New Jersey,Newark
+23.4.137.89,MX,Nuevo León,Monterrey
+54.25.211.93,US,Washington,Seattle (South Lake Union)
+170.230.249.46,US,New Jersey,Camden (Gateway)
+178.169.94.145,RU,Krasnoyarsk Krai,Krasnoyarsk
+93.43.30.7,IT,Lombardy,Milan
+116.41.182.255,US,California,Los Angeles
+70.56.72.25,US,Washington,Tukwila
+15.68.169.105,US,California,Palo Alto
+80.195.249.55,GB,Scotland,Larbert
+30.67.97.105,US,Ohio,Whitehall
+169.232.222.236,US,California,"Los Angeles (Westwood, Los Angeles)"
+86.140.54.250,GB,England,Guildford
+55.147.203.16,US,Arizona,Sierra Vista (Fort Huachuca)
+155.111.122.239,US,Ohio,Cincinnati (Central Business District)
+13.123.91.37,CA,Quebec,Montreal
+218.73.48.55,CN,Zhejiang,Taizhou (Haimen)
+18.34.64.90,SG,,Singapore
+102.76.215.65,MA,Rabat-Salé-Kénitra,Rabat (Agdal)
+78.187.193.101,TR,Istanbul,Istanbul
+197.162.128.230,EG,Giza,Abū an Numrus
+216.6.209.235,US,Massachusetts,Chelmsford Center
+74.82.84.108,CA,Ontario,Waterloo
+150.6.42.246,JP,Tokyo,Chiyoda
+78.238.68.137,FR,Île-de-France,La Courneuve
+71.15.168.97,US,Washington,Kennewick
+114.164.191.240,JP,Fukuoka,Fukuoka
+12.16.78.232,US,California,National City (Paradise Hills)
+115.25.53.156,CN,Beijing,Haidian (Haidian Qu)
+197.191.151.13,GH,Greater Accra,Accra (Osu Klottey)
+154.185.38.118,EG,Giza,Giza
+108.250.37.153,US,California,Irvine
+140.133.98.101,TW,Taiwan,Taipei
+12.72.199.247,US,New Jersey,Morristown
+94.125.85.92,IT,Lombardy,Milan
+87.65.236.224,BE,Flanders,Ghent
+142.14.180.238,CA,Ontario,Kingston (Novelis)
+214.70.95.97,US,Ohio,Whitehall
+19.99.66.81,US,Michigan,Dearborn
+200.116.69.87,CO,Antioquia,Medellín (El Poblado)
+107.4.139.235,US,Minnesota,Roseville
+21.81.104.9,US,Ohio,Whitehall
+204.111.113.56,US,Virginia,Harrisonburg
+48.181.105.165,US,New Jersey,Newark (Central Business District)
+40.180.195.166,US,Washington,Seattle (South Lake Union)
+173.37.207.204,US,Texas,Richardson
+39.15.96.210,TW,Taiwan,Taipei
+31.218.216.241,AE,Dubai,Dubai
+96.94.107.6,US,Pennsylvania,Pittsburgh
+165.106.223.95,US,Pennsylvania,Bryn Mawr
+157.187.136.25,US,Virginia,Norfolk (Joint Expeditionary Base Little Creek-Fort Story)
+190.115.64.192,BR,São Paulo,Suzano
+160.191.134.197,AU,Queensland,Brisbane
+215.254.1.100,US,Ohio,Whitehall
+216.180.131.13,US,California,San Francisco (Chinatown)
+83.143.80.247,NO,Oslo,Oslo (Alna District)
+87.201.198.48,AE,Abu Dhabi,Abu Dhabi
+113.47.191.216,CN,Guangdong,Xiaolou
+215.165.34.70,US,Ohio,Whitehall
+148.11.193.101,US,Ohio,Whitehall
+23.88.246.222,US,Florida,Tampa
+13.146.158.248,US,Washington,Seattle (South Lake Union)
+87.248.31.197,NO,Innlandet,Lillehammer
+151.102.166.193,US,Tennessee,Kingsport
+188.254.112.158,RU,Moscow,Moscow
+15.202.48.1,US,Washington,Seattle (South Lake Union)
+153.219.13.174,JP,Saga,Saga
+34.216.27.155,US,Oregon,Portland
+189.155.241.41,MX,Durango,Cinco de Mayo
+107.234.118.95,US,Texas,Dallas
+178.157.157.205,RU,Krasnodar Krai,Krasnodar
+86.227.162.58,FR,Provence-Alpes-Côte d'Azur,Marseille
+98.116.255.153,US,New York,New York
+187.199.112.104,MX,Baja California Sur,Colonia del Sol
+21.97.254.149,US,Ohio,Whitehall
+112.89.241.213,CN,Guangdong,Shenzhen
+54.57.99.7,US,New Jersey,Rahway
+73.251.127.158,US,Virginia,Countryside
+21.4.42.88,US,Ohio,Whitehall
+145.185.89.234,NL,Utrecht,Utrecht
+167.25.75.82,US,Pennsylvania,Exton
+32.66.101.222,US,New York,New York
+61.28.157.233,PH,National Capital Region,Makati City
+27.60.20.7,IN,Uttar Pradesh,Lucknow
+39.161.151.111,CN,Guangdong,Shenzhen
+75.238.250.8,US,Massachusetts,Boston
+208.157.36.42,US,New York,New York
+82.163.152.159,GB,England,Birmingham
+151.105.134.154,FI,Uusimaa,Vantaa
+83.37.241.26,ES,Madrid,Madrid
+132.113.102.129,US,Arizona,Sierra Vista (Fort Huachuca)
+69.30.55.54,US,Oregon,Beaverton (Central Beaverton)
+128.134.251.194,KR,Gyeonggi-do,Seongnam-si (Buljeong-ro)
+189.194.12.233,MX,Puebla,Puebla City
+54.71.184.211,US,Oregon,Portland
+106.146.212.125,JP,Aichi,Nishio
+24.105.86.122,US,Texas,Dallas
+172.211.242.154,NL,North Holland,Amsterdam
+136.127.112.167,US,California,Mountain View
+165.68.240.198,US,Illinois,Chicago (Woodlawn)
+146.176.204.60,GB,Scotland,Edinburgh
+154.110.9.103,TN,Tunis Governorate,Tunis
+100.129.139.220,US,Illinois,Chicago
+223.3.56.224,CN,Jiangsu,Nanjing
+135.222.75.217,GB,England,London
+100.26.205.115,CA,Quebec,Montreal
+81.191.18.230,NO,Oslo,Oslo
+44.193.108.250,US,Virginia,Sterling
+41.63.248.112,NA,Khomas Region,Windhoek
+26.229.240.123,US,Ohio,Whitehall
+24.180.224.149,US,Michigan,Alpena
+64.196.51.160,US,Illinois,Elizabeth
+111.85.71.45,CN,Guizhou,Guiyang
+202.95.246.136,CN,Guangdong,Xiaolou
+150.86.31.206,JP,Ōsaka,Kashihara (4-chōme)
+122.13.126.47,CN,Shanghai,Shuyuan Zhen (Pudong Xinqu)
+23.66.140.212,US,California,El Segundo
+81.192.233.43,MA,Rabat-Salé-Kénitra,Rabat
+102.238.106.159,MU,Plaines Wilhems,Ebene CyberCity
+196.139.234.217,EG,Giza,Ash-Shaykh Zāyid
+20.144.246.1,GB,England,London
+223.198.23.147,CN,Hainan,Jiale
+149.243.20.7,DE,Bremen,Bremen (Neustadt)
+60.100.191.40,JP,Tokyo,Minato-ku
+42.134.12.141,CN,Beijing,Haidian (Haidian Qu)
+80.2.6.156,GB,England,Wythenshawe (Baguley)
+172.247.204.214,US,California,Los Angeles (Downtown Los Angeles)
+204.136.207.102,SG,,Singapore
+41.135.94.71,ZA,Gauteng,Johannesburg
+161.32.28.140,US,Indiana,Crawfordsville
+76.135.91.183,US,Washington,Tumwater
+58.44.244.82,CN,Hunan,Loudi
+135.46.17.50,US,Indiana,Indianapolis (Mile Square)
+160.217.161.141,CZ,Jihočeský kraj,České Budějovice
+153.200.149.206,JP,Okayama,Okayama
+138.200.5.203,DE,Hesse,Frankfurt am Main (Frankfurt am Main West)
+39.77.59.111,CN,Shandong,Jinan
+101.131.165.225,CN,Beijing,Beijing
+22.99.154.185,US,Ohio,Whitehall
+58.120.70.114,KR,Seoul,Seoul (Toegye-ro)
+142.117.17.247,CA,Ontario,Toronto (North York)
+50.210.162.142,US,Michigan,Royal Oak
+125.229.131.48,TW,Taiwan,Neihu District
+114.249.127.79,CN,Beijing,Jinrongjie (Xicheng District)
+39.61.242.188,PK,Islamabad,Islamabad (H 9/1)
+22.55.97.222,US,Ohio,Whitehall
+217.5.4.91,DE,Hesse,Frankfurt am Main
+80.220.114.120,FI,Tampere,Tampere
+184.73.47.119,US,Virginia,Herndon
+220.13.62.3,JP,Tokyo,Minato-ku
+213.88.138.149,SE,Västra Götaland,Gothenburg (Landala)
+37.190.7.171,RU,Moscow,Moscow
+45.133.250.51,NL,North Holland,Amsterdam
+159.72.209.186,SE,Stockholm,Kista (Helenelund)
+66.221.225.156,US,Washington,Seattle (South Lake Union)
+213.199.26.151,IT,Lombardy,Milan
+220.177.81.26,CN,Jiangxi,Taohua
+189.234.236.180,MX,Mexico City,Mexico City (Miguel Hidalgo Villa Olímpica)
+111.111.54.51,JP,Ōsaka,Osaka
+36.76.17.63,ID,Jakarta,Jakarta Pusat
+191.237.215.253,IE,Leinster,Dublin
+209.2.194.105,US,New York,Brooklyn
+9.144.29.218,US,North Carolina,Durham (Research Triangle)
+22.139.138.234,US,Ohio,Whitehall
+163.77.164.182,IE,Leinster,Dublin (Ballsbridge)
+24.175.123.13,US,Texas,Dallas
+15.61.91.143,US,California,Palo Alto
+115.152.69.52,CN,Jiangxi,Taohua
+105.61.225.112,KE,Nairobi Area,Nairobi (Spring Valley)
+110.198.113.10,CN,Beijing,Jinrongjie (Xicheng District)
+50.229.3.198,US,Texas,Egypt
+130.121.255.165,US,Illinois,Chicago (West Loop)
+80.119.193.187,FR,Île-de-France,Paris
+161.179.121.185,US,Iowa,Cedar Rapids
+112.210.124.143,PH,National Capital Region,San Juan City
+79.116.180.43,ES,Andalusia,Otura
+44.254.20.161,US,Oregon,Boardman
+220.159.138.25,JP,Tokyo,Chiyoda
+124.236.133.1,CN,Hebei,Zhoutou
+150.82.24.54,JP,Tokyo,Chiyoda
+223.79.143.97,CN,Shanghai,Shanghai
+112.19.212.180,CN,Guangdong,Shenzhen
+156.223.171.193,EG,Giza,Al Badrashayn
+144.33.231.252,US,California,Redwood City (Redwood Shores)
+83.120.148.179,IR,East Azerbaijan,Tabriz
+37.66.24.203,FR,Brittany,Châteaubourg
+136.217.116.98,US,Arizona,Sierra Vista (Fort Huachuca)
+34.117.242.231,US,Missouri,Kansas City
+145.247.88.139,FI,Uusimaa,Espoo
+59.196.141.137,CN,Beijing,Beijing
+28.190.250.194,US,Ohio,Whitehall
+125.228.157.230,TW,Taiwan,Neihu District
+154.94.217.83,IN,Delhi,New Delhi
+155.17.145.145,US,Texas,Plano
+6.20.236.143,US,Arizona,Sierra Vista (Fort Huachuca)
+61.247.177.253,BD,Dhaka Division,Paltan
+193.134.126.241,CH,Zug,Zug
+112.146.244.88,KR,Seoul,Yongsan-dong (Hangang-daero)
+119.26.153.106,JP,Tokyo,Chiyoda
+82.159.28.223,ES,Madrid,Madrid
+190.70.236.6,CO,Caldas Department,Villamaría
+1.87.139.189,CN,Shaanxi,Yintai
+220.236.74.119,AU,New South Wales,Ryde
+214.235.56.225,US,Ohio,Whitehall
+209.94.14.49,US,Washington,Redmond (Downtown)
+170.125.64.153,US,Wisconsin,Madison
+140.237.166.240,CN,Fujian,Fuzhou (Yongtai Xian)
+198.238.10.75,US,Washington,Olympia
+66.68.211.95,US,Texas,Pharr
+200.19.16.44,BR,Federal District,Asa Sul
+192.111.48.232,CH,Ticino,Lugano
+174.12.234.233,US,Virginia,Ashburn
+20.119.144.99,US,Virginia,Ashburn
+53.57.183.6,DE,Baden-Württemberg,Stuttgart (Untertürkheim)
+118.64.97.147,CN,Beijing,Beijing
+63.144.36.10,US,Utah,Ogden
+12.8.61.244,US,Illinois,Willowbrook
+86.202.93.85,FR,Auvergne-Rhône-Alpes,Lyon
+187.239.244.238,MX,Mexico City,Mexico City (Miguel Hidalgo Villa Olímpica)
+39.213.30.131,ID,Jakarta,Kuningan Barat
+31.189.44.117,IT,Lazio,Rome
+139.194.237.82,ID,Jakarta,Jakarta
+220.247.34.176,JP,Tokyo,Chiyoda
+23.111.140.197,US,Florida,Tampa
+143.192.246.238,US,New York,New York
+164.229.210.156,US,Ohio,Whitehall
+86.0.77.154,GB,England,Lincoln
+118.119.88.60,CN,Sichuan,Muping
+108.81.31.116,US,Georgia,Tucker
+93.56.110.64,IT,Lombardy,Milan
+39.64.179.146,CN,Shandong,Jinan
+183.163.129.27,CN,Anhui,Rongcheng
+118.95.16.81,IN,Tamil Nadu,Chennai
+120.233.116.175,CN,Guangdong,Shenzhen
+140.49.115.203,US,Ohio,Whitehall
+13.148.178.119,US,Connecticut,Norwalk
+104.187.254.23,US,Texas,Richardson
+31.101.42.192,GB,England,Hatfield
+187.168.160.81,MX,Mexico City,Mexico City (Manantial Peña Pobre)
+190.200.207.20,VE,Miranda,Caracas (Los Palos Grandes)
+52.240.160.22,US,Illinois,Chicago
+155.118.175.80,US,Ohio,Cincinnati (Central Business District)
+105.160.105.14,KE,Nairobi Area,Nairobi (Spring Valley)
+150.118.58.104,US,Missouri,St Louis (Downtown West)
+174.101.217.134,US,Ohio,Xenia
+85.206.76.183,LT,Vilnius,Vilnius
+111.145.186.208,CN,Beijing,Haidian (Haidian Qu)
+221.28.31.147,JP,Tokyo,Minato-ku
+196.152.17.117,EG,Giza,Giza
+219.249.98.125,KR,Seoul,Seoul (Namdaemunno 5(o)-ga)
+70.158.78.153,US,Tennessee,Nashville (Downtown)
+51.53.188.0,TW,Taiwan,Taichung
+170.234.180.194,US,Florida,West Palm Beach
+184.156.196.185,US,New York,New York
+170.53.52.226,US,North Carolina,Greensboro
+42.3.241.180,HK,North,Kwu Tung
+168.106.117.44,HK,Islands,Tung Chung
+199.130.120.119,US,Colorado,Fort Collins
+80.87.112.172,DE,North Rhine-Westphalia,Paderborn (Kernstadt)
+159.25.59.234,DE,North Rhine-Westphalia,Düsseldorf (Stadtbezirk 04)
+220.176.66.251,CN,Jiangxi,Pingxiang
+204.76.75.48,US,Nebraska,Omaha (North Central Omaha)
+109.217.177.83,FR,Île-de-France,Paris
+61.151.178.252,CN,Shanghai,Shanghai
+160.99.188.247,RS,Central Serbia,Niš
+156.200.135.249,EG,Giza,Giza
+92.62.182.106,CH,Valais,Sierre
+217.199.245.120,RU,Moscow,Moscow
+26.7.189.144,US,Ohio,Whitehall
+121.246.191.3,IN,Maharashtra,Mumbai (Prabhadevi)
+123.186.195.48,CN,Liaoning,Dandong
+149.88.44.148,GB,England,London
+124.118.198.128,CN,Xinjiang,Ewirgol
+206.101.104.254,SG,,Singapore
+117.182.30.228,CN,Guangdong,Shenzhen
+33.180.226.73,US,Ohio,Whitehall
+107.202.237.104,US,Alabama,Theodore
+112.145.102.125,KR,Seoul,Yongsan-dong (Hangang-daero)
+16.206.229.125,US,Washington,Seattle (South Lake Union)
+93.6.61.12,FR,Île-de-France,Paris
+214.244.165.34,US,Ohio,Whitehall
+118.223.26.15,KR,Seoul,Seoul (Toegye-ro)
+163.13.24.186,TW,Taiwan,Taipei
+120.83.127.66,CN,Guangdong,Shenzhen
+107.25.37.44,US,Arizona,Youngtown
+96.99.119.189,US,Colorado,Denver (Five Points)
+164.111.16.176,US,Alabama,Birmingham
+200.217.218.218,BR,São Paulo,Birigui
+78.135.2.220,TR,Kayseri,Hacılar
+10.103.161.56,ZZ,,
+80.95.43.93,RU,Penza,Penza (Leninskiy Rayon)
+173.35.84.27,CA,Ontario,Toronto (Old Toronto)
+38.208.119.249,US,District of Columbia,Washington D.C. (Northwest Washington)
+43.16.198.54,CN,Beijing,Beijing
+4.172.87.231,CA,Ontario,Toronto
+61.37.97.122,KR,Seoul,Seoul (Toegye-ro)
+188.239.202.30,UA,Donetsk,Sloviansk
+122.51.46.78,CN,Guangdong,Guangzhou (Panyu)
+5.121.143.93,IR,Tehran,Tehrān (District 4)
+82.32.44.199,GB,England,Dudley
+167.191.217.41,US,California,Fremont (Baylands)
+107.129.73.74,US,Missouri,Springfield
+203.66.149.82,TW,Taipei,Yingge District
+87.25.49.215,IT,Lombardy,Milan
+102.74.106.157,MA,Rabat-Salé-Kénitra,Rabat (Agdal)
+199.94.82.176,US,Massachusetts,Boston
+195.86.57.1,NL,North Holland,Amsterdam
+34.27.40.238,US,Iowa,Council Bluffs
+67.206.154.41,US,Texas,Houston (Southbelt/ Ellington)
+193.128.150.31,GB,England,Milton
+18.99.166.84,GB,England,London
+159.188.96.68,US,Florida,Fleming Island
+156.112.209.5,US,Ohio,Whitehall
+219.109.163.45,JP,Ōsaka,Osaka
+193.167.58.194,FI,Kymenlaakso,Kotka
+149.150.78.85,US,New Jersey,South Orange
+34.180.74.197,US,California,Mountain View
+192.87.185.55,NL,Friesland,Leeuwarden
+74.216.36.23,CA,Ontario,Toronto (Old Toronto)
+78.20.197.245,BE,Flanders,Mechelen
+104.225.142.126,US,New York,New York
+98.225.8.234,US,Washington,Seattle
+53.96.46.106,DE,Baden-Württemberg,Stuttgart (Untertürkheim)
+202.113.161.225,CN,Beijing,Haidian (Haidian Qu)
+43.232.83.226,JP,Tokyo,Chiyoda
+19.153.234.175,US,Michigan,Dearborn
+186.219.164.247,BR,Amazonas,Parintins
+63.131.199.24,US,Kentucky,Frankfort
+66.233.234.104,US,Washington,Bellevue (Lake Hills)
+78.225.4.137,FR,Île-de-France,Noisy-le-Grand
+158.240.172.221,US,Virginia,Quantico
+30.142.222.234,US,Ohio,Whitehall
+71.41.84.62,US,Georgia,Atlanta
+158.202.111.222,JP,Tokyo,Chiyoda
+57.219.211.196,BE,Brussels Capital,Brussels
+33.240.144.134,US,Ohio,Whitehall
+63.131.117.248,US,Pennsylvania,Coraopolis
+36.63.4.238,CN,Anhui,Rongcheng
+50.15.31.78,US,Washington,Bellevue (Lake Hills)
+113.69.1.34,CN,Guangdong,Guangzhou
+123.20.154.156,VN,Hanoi,Hanoi
