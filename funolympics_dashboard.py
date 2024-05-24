@@ -483,4 +483,4 @@ else:
 
         if st.button("Predict Views"):
             predicted_views = predict_views(date, continent, event_type, event)
-            st.write(f"Predicted Views: {predicted_views:.0f}")
+            st.markdown(f"### Predicted Views: {predicted_views:.0f}")
