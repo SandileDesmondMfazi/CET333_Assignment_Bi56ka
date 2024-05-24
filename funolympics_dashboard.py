@@ -10,7 +10,7 @@ import requests
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import r2_score
-from xgboost import XGBRegressor
+from sklearn.linear_model import LinearRegression
 
 # Page configuration
 st.set_page_config(
@@ -442,29 +442,19 @@ else:
         # Process data
         processed_data, le_continent, le_event_type, le_event = process_model_data(df)
 
-        # Train model
         def train_model(data):
             features = ['day_of_week', 'continent_encoded', 'event_type_encoded', 'event_encoded']
             X = data[features]
             y = data['views']
             # Train/Test Split
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            # Model Training with XGBoost
-            model = XGBRegressor(objective='reg:squarederror', random_state=42)
-            # Hyperparameter tuning using Grid Search
-            param_grid = {
-                'n_estimators': [100, 200, 300],
-                'learning_rate': [0.01, 0.1, 0.2],
-                'max_depth': [3, 5, 7]
-            }
-            grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, scoring='r2', verbose=2)
-            grid_search.fit(X_train, y_train)
-            # Best model
-            best_model = grid_search.best_estimator_
+            # Model Training with Linear Regression
+            model = LinearRegression()
+            model.fit(X_train, y_train)
             # Model Evaluation
-            y_pred = best_model.predict(X_test)
-            score = r2_score(y_test, y_pred)
-            return best_model, X_test, y_test
+            score = model.score(X_test, y_test)
+            st.write(f"Model R^2 score: {score:.2f}")
+            return model, X_test, y_test
 
         # Train the model
         best_model, X_test, y_test = train_model(processed_data)
