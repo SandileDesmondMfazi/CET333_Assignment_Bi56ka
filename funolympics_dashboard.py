@@ -7,7 +7,10 @@ from datetime import datetime, timedelta, date
 import time
 import plotly.graph_objects as go
 import requests
-import joblib
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import r2_score
+from xgboost import XGBRegressor
 
 # Page configuration
 st.set_page_config(
@@ -416,36 +419,78 @@ else:
         if selected_device != "All":
             df_filtered = df_filtered[df_filtered['Device'] == selected_device]
 
+        # Data processing function
+        def process_model_data(data):
+            # Convert timestamp to datetime
+            data['timestamp'] = pd.to_datetime(data['timestamp'])
+            # Create a date column
+            data['date'] = data['timestamp'].dt.date
+            # Aggregate data by counting the number of requests
+            aggregated_data = data.groupby(['date', 'Continent', 'Event_Type', 'Event']).size().reset_index(name='views')
+            # Feature Engineering
+            aggregated_data['day_of_week'] = pd.to_datetime(aggregated_data['date']).dt.dayofweek
+            # Label Encoding
+            le_continent = LabelEncoder()
+            le_event_type = LabelEncoder()
+            le_event = LabelEncoder()
+            aggregated_data['continent_encoded'] = le_continent.fit_transform(aggregated_data['Continent'])
+            aggregated_data['event_type_encoded'] = le_event_type.fit_transform(aggregated_data['Event_Type'])
+            aggregated_data['event_encoded'] = le_event.fit_transform(aggregated_data['Event'])
+            return aggregated_data, le_continent, le_event_type, le_event
 
-        # Load the pre-trained model and label encoders
-        model = joblib.load('model.pkl')
-        le_continent = joblib.load('le_continent.pkl')
-        le_event_type = joblib.load('le_event_type.pkl')
-        le_event = joblib.load('le_event.pkl')
+
+        # Process data
+        processed_data, le_continent, le_event_type, le_event = process_model_data(df)
+
+        # Train model
+        def train_model(data):
+            features = ['day_of_week', 'continent_encoded', 'event_type_encoded', 'event_encoded']
+            X = data[features]
+            y = data['views']
+            # Train/Test Split
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            # Model Training with XGBoost
+            model = XGBRegressor(objective='reg:squarederror', random_state=42)
+            # Hyperparameter tuning using Grid Search
+            param_grid = {
+                'n_estimators': [100, 200, 300],
+                'learning_rate': [0.01, 0.1, 0.2],
+                'max_depth': [3, 5, 7]
+            }
+            grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, scoring='r2', verbose=2)
+            grid_search.fit(X_train, y_train)
+            # Best model
+            best_model = grid_search.best_estimator_
+            # Model Evaluation
+            y_pred = best_model.predict(X_test)
+            score = r2_score(y_test, y_pred)
+            return best_model, X_test, y_test
+
+        # Train the model
+        best_model, X_test, y_test = train_model(processed_data)
+
+
+        # Predict function
+        def predict_views(date, continent, event_type, event):
+            # Prepare the input for prediction
+            day_of_week = date.weekday()
+            month = date.month
+            day = date.day
+            continent_encoded = le_continent.transform([continent])[0]
+            event_type_encoded = le_event_type.transform([event_type])[0]
+            event_encoded = le_event.transform([event])[0]
+            input_features = [[day_of_week, month, day, continent_encoded, event_type_encoded, event_encoded]]
+            # Prediction
+            predicted_views = best_model.predict(input_features)[0]
+            return predicted_views
 
         # Streamlit App
         st.title("Event View Prediction")
-
-        # User Inputs
         date = st.date_input("Select Date")
-        continent = st.selectbox("Continent", le_continent.classes_)
-        event_type = st.selectbox("Event Type", le_event_type.classes_)
-        event = st.selectbox("Event", le_event.classes_)
+        continent = st.selectbox("Continent", processed_data['Continent'].unique())
+        event_type = st.selectbox("Event Type", processed_data['Event_Type'].unique())
+        event = st.selectbox("Event", processed_data['Event'].unique())
 
-        # Feature Engineering
-        day_of_week = date.weekday()
-        month = date.month
-        day = date.day
-
-        # Encoding the categorical features
-        continent_encoded = le_continent.transform([continent])[0]
-        event_type_encoded = le_event_type.transform([event_type])[0]
-        event_encoded = le_event.transform([event])[0]
-
-        # Prepare the input for prediction
-        input_features = np.array([[day_of_week, month, day, continent_encoded, event_type_encoded, event_encoded]])
-
-        # Prediction
-        predicted_views = model.predict(input_features)[0]
-
-        st.write(f"Predicted Views for {event} on {date}: {predicted_views:.0f}")
+        if st.button("Predict Views"):
+            predicted_views = predict_views(date, continent, event_type, event)
+            st.write(f"Predicted Views: {predicted_views:.0f}")
