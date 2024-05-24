@@ -107,7 +107,7 @@ else:
 
         # Sidebar
         with st.sidebar:
-            st.title('FunOlympics Games Dashboard')
+            st.title('🥇FunOlympics Games Dashboard')
 
             # Filter by continent
             continent_options = sorted(df['Continent'].unique())
@@ -345,7 +345,7 @@ else:
 
         # Sidebar
         with st.sidebar:
-            st.title(' FunOlympics Games Dashboard')
+            st.title('🥇FunOlympics Games Dashboard')
 
             # Filter by continent
             continent_options = sorted(df['Continent'].unique())
@@ -396,7 +396,7 @@ else:
 
         # Sidebar
         with st.sidebar:
-            st.title(' FunOlympics Games Dashboard')
+            st.title('🥇FunOlympics Games Dashboard')
 
             # Filter by continent
             continent_options = sorted(df['Continent'].unique())
