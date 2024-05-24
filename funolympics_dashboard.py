@@ -416,39 +416,6 @@ else:
         if selected_device != "All":
             df_filtered = df_filtered[df_filtered['Device'] == selected_device]
 
-        elif selected == "Predict Views":
-
-        # Data View content
-        # Process new data (initial data with past 11 days)
-        df = filter_data(process_data(API_TOKEN, URL))
-
-        # Sidebar
-        with st.sidebar:
-            st.title(' FunOlympics Games Dashboard')
-
-            sport_category_options = sorted(df['sports_group'].unique())
-            sport_category_options.insert(0, "All")
-            selected_sport_category = st.sidebar.selectbox('Sport Category', sport_category_options, index=0, key='sport_category_key')
-
-            device_options = sorted(df['Device'].unique())
-            device_options.insert(0, "All")
-            selected_device = st.sidebar.selectbox('Device', device_options, index=0, key='device_key')
-
-            country_options = sorted(df['Full Country Name'].unique())
-            country_options.insert(0, "All")
-            selected_country = st.sidebar.selectbox('Country', country_options, index=0, key='country_key')
-
-
-        # Apply filters
-        df_filtered = df.copy()
-        if selected_sport_category != "All":
-            df_filtered = df_filtered[df_filtered['sports_group'] == selected_sport_category]
-        if selected_device != "All":
-            df_filtered = df_filtered[df_filtered['Device'] == selected_device]
-        if selected_country != "All":
-            df_filtered = df_filtered[df_filtered['Country'] == selected_country]
-            
-
 
         # Load the pre-trained model and label encoders
         model = joblib.load('model.pkl')
