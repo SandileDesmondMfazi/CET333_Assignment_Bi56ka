@@ -166,6 +166,19 @@ def extract_device_os_browser(user_agent):
 
     return device, os, browser
 
+def get_event_type(resource):
+    if resource.startswith('/events/'):
+        event_type = resource.split('/')[2]
+        if event_type in ['athletics', 'cycling', 'rowing', 'swimming', 'triathlon', 'marathon']:
+            return 'Outdoor'
+        elif event_type in ['gymnastics', 'weightlifting', 'diving']:
+            return 'Indoor'
+        elif event_type in ['sailing', 'surfing']:
+            return 'Water'
+        else:
+            return 'Other'
+    return 'Other'
+
 def process_data(api_token: str, url: str) -> pd.DataFrame:
     data = get_olympic_data(api_token, url, limit=12000)
     parsed_data = parse_log_data(data)
@@ -202,6 +215,9 @@ def process_data(api_token: str, url: str) -> pd.DataFrame:
 
     # Apply the function to create the Event column
     merged_df['Event'] = merged_df['resource'].apply(get_event)
+
+    # Create a new column named 'Event_Type'
+    merged_df['Event_Type'] = merged_df['resource'].apply(get_event_type)
 
     # Create a new column named 'Full Country Name'
     merged_df['Full Country Name'] = merged_df['Country'].apply(get_full_country_name)
