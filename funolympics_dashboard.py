@@ -30,7 +30,7 @@ def process_data(api_token, url):
 
 # Function to filter data
 def filter_data(df):
-    return df[df['Country'] != 'ZZ']
+    return df[(df['Country'] != 'ZZ') & (df['Full Country Name'] != 'Other')]
 
 def events_filter(df):
     return df[df['Event'] != 'Other']
@@ -206,7 +206,7 @@ else:
             continent_counts = df['Continent'].value_counts().nlargest(10)  # Get the top 10 continents
             fig = go.Figure(data=[go.Bar(x=continent_counts.values, y=continent_counts.index, orientation='h')])
             fig.update_layout(
-                title="Top 10 Continents by Visits",
+                title="Top Continents by Visits",
                 xaxis_title="Visit Count",
                 yaxis_title="Continent",
                 yaxis=dict(autorange="reversed")  # Order the y-axis by values in descending order
