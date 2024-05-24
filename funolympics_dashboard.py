@@ -6,6 +6,7 @@ from streamlit_option_menu import option_menu
 from datetime import datetime, timedelta, date
 import time
 import plotly.graph_objects as go
+import requests
 
 # Page configuration
 st.set_page_config(
@@ -24,8 +25,6 @@ history = []
 
 # Function to process data
 def process_data(api_token, url):
-    if "status_updated" not in st.session_state:
-        st.session_state["status_updated"] = True
     new_df = funolympics_data_processing.process_data(api_token, url)
     return pd.concat([df, new_df.loc[:np.random.choice(range(4500, 5000))]], ignore_index=True)
 
@@ -36,19 +35,40 @@ def filter_data(df):
 def events_filter(df):
     return df[df['Event'] != 'Other']
 
+# Import the requests library
+import requests
+
+# Function to check if the API token is valid
+def check_token(token, url):
+    """
+    Function to check if the API token is valid by sending a request to the server.
+    """
+    headers = {'Authorization': f'Bearer {token}'}
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        return True  # Token is valid
+    else:
+        return False  # Token is invalid
 
 # Function to show login form
 def show_login_form():
+    # Display the login form
     with st.form("login_form"):
         url = st.text_input("Enter API URL")
         token = st.text_input("Enter API Token", type="password")
         submit = st.form_submit_button("Submit")
 
+        # When the form is submitted
         if submit:
-            st.session_state["API_URL"] = url
-            st.session_state["API_TOKEN"] = token
-            st.session_state["logged_in"] = True
-            st.success("Credentials submitted successfully")
+            # Check if the token is valid
+            if check_token(token, url):
+                st.session_state["API_URL"] = url
+                st.session_state["API_TOKEN"] = token
+                st.session_state["logged_in"] = True
+                st.success("Login successful! Proceeding to dashboard...")
+                # Proceed to the dashboard or any other action
+            else:
+                st.error("Invalid API token. Please try again.")
 
 # Check if credentials are stored in session state
 if "logged_in" not in st.session_state:
@@ -89,17 +109,19 @@ else:
         with st.sidebar:
             st.title('FunOlympics Games Dashboard')
 
-            sport_category_options = sorted(df['sports_group'].unique())
-            sport_category_options.insert(0, "All")
-            selected_sport_category = st.sidebar.selectbox('Sport Category', sport_category_options, index=0, key='sport_category_key')
+            # Filter by continent
+            continent_options = sorted(df['Continent'].unique())
+            continent_options.insert(0, "All")
+            selected_continent = st.sidebar.selectbox('Continent', continent_options, index=0, key='continent_key')
+
+            # Filter by Olympic event type
+            event_type_options = sorted(df['Event_Type'].unique())  # Assuming 'Event_Type' is the column for Olympic event type
+            event_type_options.insert(0, "All")
+            selected_event_type = st.sidebar.selectbox('Olympic Event Type', event_type_options, index=0, key='event_type_key')
 
             device_options = sorted(df['Device'].unique())
             device_options.insert(0, "All")
             selected_device = st.sidebar.selectbox('Device', device_options, index=0, key='device_key')
-
-            country_options = sorted(df['Full Country Name'].unique())
-            country_options.insert(0, "All")
-            selected_country = st.sidebar.selectbox('Country', country_options, index=0, key='country_key')
 
         def calculate_kpis(df):
             # Calculate total visits and average duration
@@ -284,14 +306,13 @@ else:
                 df = simulate_new_data(df)
                 st.session_state["session_state"]["df"] = df
 
-                # Apply filters
                 df_filtered = df.copy()
-                if selected_sport_category != "All":
-                    df_filtered = df_filtered[df_filtered['sports_group'] == selected_sport_category]
+                if selected_continent != "All":
+                    df_filtered = df_filtered[df_filtered['Continent'] == selected_continent]
+                if selected_event_type != "All":
+                    df_filtered = df_filtered[df_filtered['Event_Type'] == selected_event_type]
                 if selected_device != "All":
                     df_filtered = df_filtered[df_filtered['Device'] == selected_device]
-                if selected_country != "All":
-                    df_filtered = df_filtered[df_filtered['Full Country Name'] == selected_country]
 
                 # Calculate KPIs
                 kpis = calculate_kpis(events_filter(filter_data(df_filtered)))
@@ -326,28 +347,29 @@ else:
         with st.sidebar:
             st.title(' FunOlympics Games Dashboard')
 
-            sport_category_options = sorted(df['sports_group'].unique())
-            sport_category_options.insert(0, "All")
-            selected_sport_category = st.sidebar.selectbox('Sport Category', sport_category_options, index=0, key='sport_category_key')
+            # Filter by continent
+            continent_options = sorted(df['Continent'].unique())
+            continent_options.insert(0, "All")
+            selected_continent = st.sidebar.selectbox('Continent', continent_options, index=0, key='continent_key')
+
+            # Filter by Olympic event type
+            event_type_options = sorted(df['Event_Type'].unique())  # Assuming 'Event_Type' is the column for Olympic event type
+            event_type_options.insert(0, "All")
+            selected_event_type = st.sidebar.selectbox('Olympic Event Type', event_type_options, index=0, key='event_type_key')
 
             device_options = sorted(df['Device'].unique())
             device_options.insert(0, "All")
             selected_device = st.sidebar.selectbox('Device', device_options, index=0, key='device_key')
 
-            country_options = sorted(df['Full Country Name'].unique())
-            country_options.insert(0, "All")
-            selected_country = st.sidebar.selectbox('Country', country_options, index=0, key='country_key')
-
-
         # Apply filters
         df_filtered = df.copy()
-        if selected_sport_category != "All":
-            df_filtered = df_filtered[df_filtered['sports_group'] == selected_sport_category]
+        if selected_continent != "All":
+            df_filtered = df_filtered[df_filtered['Continent'] == selected_continent]
+        if selected_event_type != "All":
+            df_filtered = df_filtered[df_filtered['Event_Type'] == selected_event_type]
         if selected_device != "All":
             df_filtered = df_filtered[df_filtered['Device'] == selected_device]
-        if selected_country != "All":
-            df_filtered = df_filtered[df_filtered['Country'] == selected_country]
-            
+
         current_date = datetime.now().strftime("%Y%m%d")
         # Display the button for downloading the data
         csv = df.to_csv(index=False).encode("utf-8")
@@ -376,28 +398,28 @@ else:
         with st.sidebar:
             st.title(' FunOlympics Games Dashboard')
 
-            sport_category_options = sorted(df['sports_group'].unique())
-            sport_category_options.insert(0, "All")
-            selected_sport_category = st.sidebar.selectbox('Sport Category', sport_category_options, index=0, key='sport_category_key')
+            # Filter by continent
+            continent_options = sorted(df['Continent'].unique())
+            continent_options.insert(0, "All")
+            selected_continent = st.sidebar.selectbox('Continent', continent_options, index=0, key='continent_key')
+
+            # Filter by Olympic event type
+            event_type_options = sorted(df['Event_Type'].unique())  # Assuming 'Event_Type' is the column for Olympic event type
+            event_type_options.insert(0, "All")
+            selected_event_type = st.sidebar.selectbox('Olympic Event Type', event_type_options, index=0, key='event_type_key')
 
             device_options = sorted(df['Device'].unique())
             device_options.insert(0, "All")
             selected_device = st.sidebar.selectbox('Device', device_options, index=0, key='device_key')
 
-            country_options = sorted(df['Full Country Name'].unique())
-            country_options.insert(0, "All")
-            selected_country = st.sidebar.selectbox('Country', country_options, index=0, key='country_key')
-
-
         # Apply filters
         df_filtered = df.copy()
-        if selected_sport_category != "All":
-            df_filtered = df_filtered[df_filtered['sports_group'] == selected_sport_category]
+        if selected_continent != "All":
+            df_filtered = df_filtered[df_filtered['Continent'] == selected_continent]
+        if selected_event_type != "All":
+            df_filtered = df_filtered[df_filtered['Event_Type'] == selected_event_type]
         if selected_device != "All":
             df_filtered = df_filtered[df_filtered['Device'] == selected_device]
-        if selected_country != "All":
-            df_filtered = df_filtered[df_filtered['Country'] == selected_country]
-            
 
 
         # Load the trained model
