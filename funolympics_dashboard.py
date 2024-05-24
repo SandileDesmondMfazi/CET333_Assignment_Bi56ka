@@ -211,6 +211,17 @@ else:
                 yaxis_title="Visits"
             )
             return fig
+        
+        # Function to create a vertical bar chart for top 15 countries by visit count
+        def create_country_visit_chart(df):
+            top_countries = df['Full Country Name'].value_counts().nlargest(15)  # Get the top 15 countries by visit count
+            fig = go.Figure(data=[go.Bar(x=top_countries.index, y=top_countries.values)])
+            fig.update_layout(
+                title="Top 15 Countries by Visit Count",
+                xaxis_title="Country",
+                yaxis_title="Visit Count"
+            )
+            return fig
 
         # Initialize session state
         if "session_state" not in st.session_state:
@@ -234,6 +245,7 @@ else:
         col3, col4 = st.columns(2)
         resource_placeholder = col3.empty()
         continent_placeholder = col4.empty()
+        country_visit_chart_placeholder = st.empty()
         line_chart_placeholder = st.empty()
 
         
@@ -279,7 +291,7 @@ else:
                 if selected_device != "All":
                     df_filtered = df_filtered[df_filtered['Device'] == selected_device]
                 if selected_country != "All":
-                    df_filtered = df_filtered[df_filtered['Country'] == selected_country]
+                    df_filtered = df_filtered[df_filtered['Full Country Name'] == selected_country]
 
                 # Calculate KPIs
                 kpis = calculate_kpis(events_filter(filter_data(df_filtered)))
@@ -295,6 +307,7 @@ else:
                 resource_placeholder.plotly_chart(create_resource_chart(filter_data(df_filtered)), use_container_width=True)
                 line_chart_placeholder.plotly_chart(create_line_chart(filter_data(df_filtered), filter_data(static_df)), use_container_width=True)
                 continent_placeholder.plotly_chart(create_continent_chart(df_filtered), use_container_width=True)
+                country_visit_chart_placeholder.plotly_chart(create_country_visit_chart(df_filtered), use_container_width=True)
 
                 # Pause for 3 seconds
                 time.sleep(3)
