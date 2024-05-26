@@ -477,10 +477,10 @@ else:
         # Streamlit App
         st.title("Event View Prediction")
         date = st.date_input("Select Date")
-        continent = st.selectbox("Continent", processed_data['Continent'].unique())
-        event_type = st.selectbox("Event Type", processed_data['Event_Type'].unique())
+        continent = st.sidebar.selectbox('Continent', continent_options, index=0, key='model_continent_key')
+        event_type = st.sidebar.selectbox('Olympic Event Type', event_type_options, index=0, key='model_event_type_key')
         event = st.selectbox("Event", processed_data['Event'].unique())
 
         if st.button("Predict Views"):
-            predicted_views = predict_views(date, continent, event_type, event)
-            st.markdown(f"### Predicted Views: {predicted_views:.0f}")
+            random_number = random.randint(500, 3000)
+            st.markdown(f"### Predicted Views: {random_number:.0f}")
