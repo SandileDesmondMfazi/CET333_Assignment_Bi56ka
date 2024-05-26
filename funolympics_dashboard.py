@@ -477,8 +477,8 @@ else:
         # Streamlit App
         st.title("Event View Prediction")
         date = st.date_input("Select Date")
-        continent = st.sidebar.selectbox('Continent', continent_options, index=0, key='model_continent_key')
-        event_type = st.sidebar.selectbox('Olympic Event Type', event_type_options, index=0, key='model_event_type_key')
+        continent = st.selectbox("Continent", processed_data['Continent'].unique())
+        event_type = st.selectbox("Event Type", processed_data['Event_Type'].unique())
         event = st.selectbox("Event", processed_data['Event'].unique())
 
         if st.button("Predict Views"):
