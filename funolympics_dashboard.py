@@ -419,68 +419,73 @@ else:
         if selected_device != "All":
             df_filtered = df_filtered[df_filtered['Device'] == selected_device]
 
-        # Data processing function
-        def process_model_data(data):
-            # Convert timestamp to datetime
-            data['timestamp'] = pd.to_datetime(data['timestamp'])
-            # Create a date column
-            data['date'] = data['timestamp'].dt.date
-            # Aggregate data by counting the number of requests
-            aggregated_data = data.groupby(['date', 'Continent', 'Event_Type', 'Event']).size().reset_index(name='views')
-            # Feature Engineering
-            aggregated_data['day_of_week'] = pd.to_datetime(aggregated_data['date']).dt.dayofweek
-            # Label Encoding
-            le_continent = LabelEncoder()
-            le_event_type = LabelEncoder()
-            le_event = LabelEncoder()
-            aggregated_data['continent_encoded'] = le_continent.fit_transform(aggregated_data['Continent'])
-            aggregated_data['event_type_encoded'] = le_event_type.fit_transform(aggregated_data['Event_Type'])
-            aggregated_data['event_encoded'] = le_event.fit_transform(aggregated_data['Event'])
-            return aggregated_data, le_continent, le_event_type, le_event
+        # Predictive analytics
+        st.title("Predictive Analytics for FunOlympics Games")
 
+        # Select data columns for training
+        df['timestamp'] = pd.to_datetime(df['timestamp'])
+        df['date'] = df['timestamp'].dt.date
+        df['day_of_week'] = df['timestamp'].dt.dayofweek
+        df['hour'] = df['timestamp'].dt.hour
 
-        # Process data
-        processed_data, le_continent, le_event_type, le_event = process_model_data(df)
+        label_encoder_country = LabelEncoder()
+        df['Country_Encoded'] = label_encoder_country.fit_transform(df['Full Country Name'])
 
-        def train_model(data):
-            features = ['day_of_week', 'continent_encoded', 'event_type_encoded', 'event_encoded']
-            X = data[features]
-            y = data['views']
-            # Train/Test Split
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            # Model Training with Linear Regression
-            model = LinearRegression()
-            model.fit(X_train, y_train)
-            # Model Evaluation
-            score = model.score(X_test, y_test)
-            st.write(f"Model R^2 score: {score:.2f}")
-            return model, X_test, y_test
+        label_encoder_continent = LabelEncoder()
+        df['Continent_Encoded'] = label_encoder_continent.fit_transform(df['Continent'])
 
-        # Train the model
-        best_model, X_test, y_test = train_model(processed_data)
+        label_encoder_event_type = LabelEncoder()
+        df['Event_Type_Encoded'] = label_encoder_event_type.fit_transform(df['Event_Type'])
 
+        label_encoder_event = LabelEncoder()
+        df['Event_Encoded'] = label_encoder_event.fit_transform(df['Event'])
 
-        # Predict function
-        def predict_views(date, continent, event_type, event):
-            # Prepare the input for prediction
-            day_of_week = date.weekday()
-            month = date.month
-            day = date.day
-            continent_encoded = le_continent.transform([continent])[0]
-            event_type_encoded = le_event_type.transform([event_type])[0]
-            event_encoded = le_event.transform([event])[0]
-            input_features = [[day_of_week, continent_encoded, event_type_encoded, event_encoded]]
-            # Prediction
-            predicted_views = best_model.predict(input_features)[0]
-            return predicted_views
+        # Group by the relevant columns and count occurrences
+        views_count = df.groupby(['date', 'Continent', 'Event_Type', 'Event']).size().reset_index(name='views')
 
-        # Streamlit App
-        st.title("Event View Prediction")
-        date = st.date_input("Select Date")
-        continent = st.selectbox("Continent", processed_data['Continent'].unique())
-        event_type = st.selectbox("Event Type", processed_data['Event_Type'].unique())
-        event = st.selectbox("Event", processed_data['Event'].unique())
+        # Merge the counts back to the original dataframe
+        df = df.merge(views_count, on=['date', 'Continent', 'Event_Type', 'Event'], how='left')
 
-        if st.button("Predict Views"):
-            predicted_views = predict_views(date, continent, event_type, event)
-            st.write(f"Predicted Views: {predicted_views:.0f}")
+        features = ['day_of_week', 'hour', 'Country_Encoded', 'Continent_Encoded', 'Event_Type_Encoded', 'Event_Encoded']
+        target = 'views'
+
+        if len(df) < 2:
+            st.warning("Not enough data to perform prediction. Please ensure your dataset has enough entries.")
+        else:
+            X = df[features]
+            y = df[target]
+
+            try:
+                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+                model = LinearRegression()
+                model.fit(X_train, y_train)
+
+                score = model.score(X_test, y_test)
+                # st.write(f"Model R^2 score: {score:.2f}")
+
+                st.subheader("Make a Prediction")
+
+                # User inputs for prediction
+                selected_date = st.date_input("Date")
+                selected_continent = st.selectbox("Continent", label_encoder_continent.classes_)
+                selected_event_type = st.selectbox("Event Type", label_encoder_event_type.classes_)
+                selected_event = st.selectbox("Event", label_encoder_event.classes_)
+
+                # Transform inputs to encoded values
+                selected_day_of_week = selected_date.weekday()
+                selected_hour = st.slider("Hour of the Day", 0, 23)
+                selected_country = st.selectbox("Country", label_encoder_country.classes_)
+
+                continent_encoded = label_encoder_continent.transform([selected_continent])[0]
+                event_type_encoded = label_encoder_event_type.transform([selected_event_type])[0]
+                event_encoded = label_encoder_event.transform([selected_event])[0]
+                country_encoded = label_encoder_country.transform([selected_country])[0]
+
+                # Prepare input data for prediction
+                input_data = pd.DataFrame([[selected_day_of_week, selected_hour, country_encoded, continent_encoded, event_type_encoded, event_encoded]], columns=features)
+                prediction = model.predict(input_data)[0]
+
+                st.write(f"Predicted views: {int(prediction)}")
+            except ValueError as e:
+                st.error(f"Error during model training: {e}")
