@@ -469,7 +469,7 @@ else:
             continent_encoded = le_continent.transform([continent])[0]
             event_type_encoded = le_event_type.transform([event_type])[0]
             event_encoded = le_event.transform([event])[0]
-            input_features = [[day_of_week, month, day, continent_encoded, event_type_encoded, event_encoded]]
+            input_features = [[day_of_week, continent_encoded, event_type_encoded, event_encoded]]
             # Prediction
             predicted_views = best_model.predict(input_features)[0]
             return predicted_views
@@ -482,5 +482,5 @@ else:
         event = st.selectbox("Event", processed_data['Event'].unique())
 
         if st.button("Predict Views"):
-            random_number = random.randint(500, 3000)
-            st.markdown(f"### Predicted Views: {random_number:.0f}")
+            predicted_views = predict_views(date, continent, event_type, event)
+            st.write(f"Predicted Views: {predicted_views:.0f}")
