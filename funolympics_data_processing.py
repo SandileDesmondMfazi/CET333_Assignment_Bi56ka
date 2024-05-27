@@ -179,10 +179,42 @@ def get_event_type(resource):
             return 'Other'
     return 'Other'
 
+def clean_data(df: pd.DataFrame) -> pd.DataFrame:
+    # Identify and correct missing or corrupt data entries
+    logging.info("Cleaning data...")
+    
+    # Fill or drop missing values
+    df.fillna({
+        'IP': '0.0.0.0',
+        'request_method': 'GET',
+        'resource': '/unknown',
+        'status_code': 0,
+        'response_size': 0,
+        'user_agent': 'Unknown',
+        'elapsed_time': '0'
+    }, inplace=True)
+    
+    # Replace corrupt status codes and response sizes with appropriate values
+    df['status_code'] = df['status_code'].apply(lambda x: x if 100 <= x <= 599 else 0)
+    df['response_size'] = df['response_size'].apply(lambda x: x if x >= 0 else 0)
+    
+    # Ensure all timestamps are in the correct format
+    try:
+        df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
+    except Exception as e:
+        logging.error(f"Error parsing timestamps: {e}")
+    
+    # Drop rows with completely invalid timestamps
+    df.dropna(subset=['timestamp'], inplace=True)
+    
+    logging.info("Data cleaning complete.")
+    return df
+
 def process_data(api_token: str, url: str) -> pd.DataFrame:
     data = get_olympic_data(api_token, url, limit=12000)
     parsed_data = parse_log_data(data)
     df = pd.DataFrame(parsed_data)
+    df = clean_data(df)
     IP_INFO = pd.read_csv('ipinfoData.csv')
 
     # Merge the DataFrames based on the 'IP' column
